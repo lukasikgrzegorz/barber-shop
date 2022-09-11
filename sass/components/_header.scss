@@ -1,0 +1,36 @@
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    &__logo {
+            color: $light-color;
+            position: absolute;
+            top: 40px;
+            left: 31px;
+        }
+    
+        &__logo-icon {
+            fill: currentColor;
+            width: 69px;
+            height: 55px;
+        }
+    
+        &__menu {
+            position: absolute;
+            top: 48px;
+            right: 31px;
+            background-color: transparent;
+            border: none;
+            color: $light-color;
+            width: 40px;
+            height: 40px;
+        }
+    
+        &__menu-icon {
+            fill: currentColor;
+            width: 24px;
+            height: 16px;
+        }
+}

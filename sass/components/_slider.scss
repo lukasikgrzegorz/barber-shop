@@ -1,0 +1,70 @@
+.slider{
+
+    &__section{
+        height: 580px;
+        background-image: url(./../images/slider-img.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $light-color;
+        padding-top: 208px;
+        padding-left: 31px; 
+    }
+ 
+
+    &__caption{
+        max-width: 306px;
+        overflow: hidden;
+    }
+
+    &__decorative-span{
+        text-transform: uppercase;
+        color: $decoration-span-dark-color;
+        position: relative;
+        padding-left: 80px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
+        
+
+        &::before{
+            content:'';
+            position: absolute;
+            top:50%;
+            left:0px;
+            width: 60px;
+            height: 1px;
+            background-color: $decoration-span-dark-color;
+        }
+    }
+
+    &__title{
+        font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 1.16;
+            letter-spacing: 0.05em;
+            margin-top: 20px;
+           
+            
+    }
+
+    &__paragraph{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.62;
+        letter-spacing: 0.02em;
+        color: $secondary-light-color;
+        margin-top: 20px;
+    }
+
+    
+
+    
+}
