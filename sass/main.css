@@ -1,5 +1,7 @@
 /*Colors*/
-/*Paddings*/
+/*Gradients*/
+/*Geometry*/
+/*Transition*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -33,6 +35,11 @@ a {
 .container {
   max-width: 1200px;
   display: flex;
+  margin: auto;
+}
+
+.is-hidden {
+  display: none;
 }
 
 .header {
@@ -40,6 +47,7 @@ a {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 .header__logo {
   color: #FFFFFF;
@@ -68,15 +76,26 @@ a {
   height: 16px;
 }
 
-.slider__section {
+.slider__thumb {
+  width: 100%;
   height: 580px;
-  background-image: url(./../images/slider-img.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+.slider__item {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider__section {
+  width: 100%;
+  height: 580px;
+  background-color: rgba(25, 28, 38, 0.2);
   color: #FFFFFF;
   padding-top: 208px;
   padding-left: 31px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .slider__caption {
   max-width: 306px;
@@ -121,4 +140,146 @@ a {
   letter-spacing: 0.02em;
   color: #9DA4BD;
   margin-top: 20px;
+}
+
+.about__container {
+  flex-direction: column;
+}
+.about__decorative-span {
+  text-transform: uppercase;
+  color: #303030;
+  position: relative;
+  padding-left: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+}
+.about__decorative-span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+.about__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  margin-top: 20px;
+}
+.about__paragraph {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  color: #555555;
+}
+.about__button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px #FF6C00 solid;
+  border-radius: 25px;
+  width: 160px;
+  height: 40px;
+  margin-top: 40px;
+  transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1), background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about__button:hover, .about__button:focus {
+  background-color: #FF6C00;
+  color: #FFFFFF;
+}
+
+.pricelist__section {
+  background: url(./../../images/pricelist-bg.png), #191C26;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.pricelist__container {
+  flex-direction: column;
+}
+.pricelist__decorative-span {
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+  position: relative;
+  padding-left: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+}
+.pricelist__decorative-span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 60px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.6);
+}
+.pricelist__title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+.pricelist__table {
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  margin-top: 44px;
+  padding: 30px;
+}
+.pricelist__item {
+  color: #9DA4BD;
+  line-height: 2.14;
+  letter-spacing: 0.02em;
+  display: flex;
+}
+.pricelist__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.pricelist__name {
+  flex-grow: 1;
+  display: flex;
+}
+.pricelist__name::after {
+  content: "";
+  margin: 0 6px 0 6px;
+  flex-grow: 1;
+  border-bottom: 1px #9DA4BD solid;
+}
+.pricelist__button {
+  align-self: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px #FF6C00 solid;
+  border-radius: 25px;
+  width: 160px;
+  height: 40px;
+  margin-top: 50px;
+  color: #FFFFFF;
+  transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1), background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pricelist__button:hover, .pricelist__button:focus {
+  background-color: #FF6C00;
+  color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */

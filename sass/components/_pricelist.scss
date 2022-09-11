@@ -1,0 +1,99 @@
+.pricelist{
+    &__section{
+        background: url(./../../images/pricelist-bg.png), $background-dark-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__container{
+        flex-direction: column;
+    }
+
+    &__decorative-span {
+        text-transform: uppercase;
+        color: $decoration-span-dark-color;
+        position: relative;
+        padding-left: 80px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                width: 60px;
+                height: 1px;
+                background-color: $decoration-span-dark-color;
+            }
+
+        }
+
+    &__title{
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1.16;
+        letter-spacing: 0.05em;
+        color: $light-color;
+        margin-top: 20px;
+    }
+
+    &__table{
+        background: $pricelist-backgroud;
+        margin-top: 44px;
+        padding: 30px;
+       
+    }
+
+    &__item{
+        color: $secondary-light-color;
+        line-height: 2.14;
+        letter-spacing: 0.02em;
+        display: flex;
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }   
+    }
+
+    &__name{
+        flex-grow: 1;
+        display: flex;
+
+        &::after{
+            content: '';
+            margin: 0 6px 0 6px;
+            flex-grow: 1;
+            border-bottom: 1px $secondary-light-color solid;
+        }
+    }
+
+   
+    &__button{
+        align-self: center;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px $accent-color solid;
+        border-radius: 25px;
+        width: 160px;
+        height: 40px;
+        margin-top: 50px;
+        color: $light-color;
+        transition: color $main-animation, 
+                    background-color $main-animation;
+
+        &:hover,
+        &:focus{
+            background-color: $accent-color;
+            color: $light-color;
+        }
+    }
+}
