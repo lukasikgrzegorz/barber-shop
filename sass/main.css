@@ -364,9 +364,304 @@ a {
   line-height: 22px;
   margin-top: 7px;
 }
-.details__paragraph {
+.details__diagram-caption {
   font-weight: 600;
   font-size: 11px;
   line-height: 15px;
   text-align: center;
+}
+
+.team__container {
+  flex-direction: column;
+}
+.team__section {
+  background-color: #F7F7F7;
+}
+.team__decorative-span {
+  text-transform: uppercase;
+  color: #303030;
+  position: relative;
+  padding-left: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+}
+.team__decorative-span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+.team__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  margin-top: 20px;
+}
+.team__list {
+  margin-top: 44px;
+  display: flex;
+  row-gap: 64px;
+  flex-wrap: wrap;
+}
+.team__item {
+  flex-basis: 100%;
+}
+.team__thumb {
+  width: 100%;
+  height: auto;
+}
+.team__photo {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.team__caption {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.team__name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38;
+  letter-spacing: 0.02em;
+}
+.team__position {
+  margin-top: 8px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #FF6C00;
+}
+.team__socials {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+.team__social-link {
+  color: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team__social-link:hover, .team__social-link:focus {
+  color: #FF6C00;
+}
+.team__social-icon {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+
+.portfolio__container {
+  flex-direction: column;
+}
+.portfolio__decorative-span {
+  text-transform: uppercase;
+  color: #303030;
+  position: relative;
+  padding-left: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+}
+.portfolio__decorative-span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+.portfolio__list {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.portfolio__item {
+  flex-basis: 100%;
+}
+.portfolio__thumb {
+  width: 100%;
+  height: auto;
+}
+.portfolio__photo {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.reservation__section {
+  background-color: #191C26;
+}
+.reservation__container {
+  flex-direction: column;
+}
+.reservation__title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.reservation__form {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 44px;
+}
+.reservation__input {
+  color: rgba(157, 164, 189, 0.4);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  flex-basis: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-bottom: 8px;
+  border-bottom: 1px solid;
+}
+.reservation__input::-moz-placeholder {
+  color: currentColor;
+}
+.reservation__input:-ms-input-placeholder {
+  color: currentColor;
+}
+.reservation__input::placeholder {
+  color: currentColor;
+}
+.reservation__input:hover, .reservation__input:focus {
+  color: #FFFFFF;
+}
+.reservation__textarea {
+  color: rgba(157, 164, 189, 0.4);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-bottom: 8px;
+  border-bottom: 1px solid;
+  resize: none;
+  height: 76px;
+}
+.reservation__textarea::-moz-placeholder {
+  color: currentColor;
+}
+.reservation__textarea:-ms-input-placeholder {
+  color: currentColor;
+}
+.reservation__textarea::placeholder {
+  color: currentColor;
+}
+.reservation__textarea:hover, .reservation__textarea:focus {
+  color: #FFFFFF;
+}
+.reservation__button {
+  align-self: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px #FF6C00 solid;
+  border-radius: 25px;
+  width: 160px;
+  height: 40px;
+  color: #FFFFFF;
+  transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1), background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reservation__button:hover, .reservation__button:focus {
+  background-color: #FF6C00;
+  color: #FFFFFF;
+}
+
+.contact__section {
+  background: url(./../images/contact-bg.png), #191C26;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.contact__container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact__title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.contact__list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact__item {
+  color: #9DA4BD;
+  display: flex;
+  align-items: center;
+}
+.contact__link {
+  color: currentColor;
+  font-style: normal;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.contact__link--underline {
+  color: #9DA4BD;
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.contact__icon {
+  display: block;
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
 }/*# sourceMappingURL=main.css.map */
