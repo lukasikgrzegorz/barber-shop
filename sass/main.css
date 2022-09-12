@@ -10,7 +10,7 @@
 
 body {
   color: #303030;
-  background-color: #F7F7F7;
+  background-color: #FFFFFF;
   font-family: "Open Sans", "Raleway", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -282,4 +282,91 @@ a {
 .pricelist__button:hover, .pricelist__button:focus {
   background-color: #FF6C00;
   color: #FFFFFF;
+}
+
+.details__container {
+  flex-direction: column;
+}
+.details__decorative-span {
+  text-transform: uppercase;
+  color: #303030;
+  position: relative;
+  padding-left: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+}
+.details__decorative-span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+.details__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  margin-top: 20px;
+}
+.details__paragraph {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  color: #555555;
+}
+.details__diagram {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 44px;
+}
+.details__diagram-box {
+  flex-basis: calc((100% - 30px) / 2);
+  background-color: #F7F7F7;
+  height: 133px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 24px;
+}
+.details__diagram-box:nth-child(2n) {
+  transform: translateY(35px);
+}
+.details__diagram-number {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.35;
+  text-align: center;
+  letter-spacing: 0.05em;
+  display: flex;
+}
+.details__diagram-number::after {
+  content: "+";
+  color: #FF6C00;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 7px;
+}
+.details__paragraph {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

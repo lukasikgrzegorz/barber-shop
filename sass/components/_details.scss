@@ -1,0 +1,101 @@
+.details{
+
+    &__container{
+        flex-direction: column;
+    }
+    
+    &__decorative-span {
+        text-transform: uppercase;
+        color: $main-color;
+        position: relative;
+        padding-left: 80px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            width: 60px;
+            height: 1px;
+            background-color: $main-color;
+        }
+    }
+
+    &__title{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1.16;
+        letter-spacing: 0.05em;
+        margin-top: 20px;
+    }
+
+    &__paragraph{
+        font-size: 14px;
+        line-height: 1.86;
+        letter-spacing: 0.02em;
+        margin-top: 20px;
+        color: $secondary-color;
+    }
+
+    &__diagram{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 44px;
+    }
+
+    &__diagram-box{
+        flex-basis: calc(( 100% - 30px ) / 2);
+        background-color: $background-light-color;
+        height: 133px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around ;
+        padding: 20px 24px;
+
+        &:nth-child(2n){
+            transform: translateY(35px);
+        }
+    }
+
+    &__diagram-number{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1.35;
+        text-align: center;
+        letter-spacing: 0.05em;
+        display: flex;
+
+        &::after{
+            content: '+';
+            color: $accent-color;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            margin-top: 7px;
+        }
+    }
+
+    &__paragraph{
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 15px;
+        text-align: center;
+    }
+
+
+}
