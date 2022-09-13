@@ -1,0 +1,112 @@
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $background-main-color;
+    width: 75vw;
+    height: calc(100vh - calc(100vh - 100%));
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+    padding-top: 118px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    &__close-button{
+        color: $main-color;
+        background: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 48px;
+        right: 31px;
+        cursor: pointer;
+
+    }
+
+    &__close-icon{
+        width: 19px;
+        height: 19px;
+        fill: currentColor;
+    }
+
+    &__navigation-list{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__navigation-link{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.38px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: $main-color;
+        transition: color $main-animation;
+
+        &:hover,
+        &:focus{
+            color: $accent-color;
+           
+        }
+    }
+
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    &__contact-link{
+        display: block;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.38;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: $main-color;
+        transition: color $main-animation;
+
+        &:hover,
+        &:focus{
+            color: $accent-color;
+           
+        }
+    }
+
+    &__button{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px $accent-color solid;
+        border-radius: 25px;
+        width: 160px;
+        height: 40px;
+        color: $main-color;
+        transition: color $main-animation, 
+                    background-color $main-animation;
+
+        &:hover,
+        &:focus{
+            background-color: $accent-color;
+            color: $light-color;
+        }
+    }
+
+
+}
+
+.is-open {
+    transform: translateX(0);
+}
+
+
+
