@@ -28,6 +28,12 @@ a{
     padding: $small-padding;
 }
 
+@media screen and (min-width: 768px) {
+    .section{
+        padding: $medium-padding;
+    }
+}
+
 .container{
     max-width: 1200px;
     display: flex;

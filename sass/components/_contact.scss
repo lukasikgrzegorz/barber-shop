@@ -21,8 +21,21 @@
         text-align: center;
     }
 
-    &__list{
+    &__wrapper{
         margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+    }
+
+    @media screen and (min-width:768px) {
+        &__wrapper{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__list{
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -72,8 +85,7 @@
 
     &__open-info{
         display: flex;
-        flex-direction: column;
-        margin-top: 44px;
+        flex-direction: column; 
         align-items: flex-start;
         gap: 20px
     }

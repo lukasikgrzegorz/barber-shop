@@ -8,9 +8,7 @@
     transform: translateX(100%);
     background-color: transparent;
     transition: transform 300ms ease-in-out;
-  
-
-
+    
     &__container{
         background-color: $background-main-color;
         padding-top: 118px;
@@ -21,10 +19,10 @@
         width: 75%;
         margin-left: 25%;
         height: 100%;  
+        box-shadow: $menu-container-shadow;
         
     }
     
-
     &__close-button{
         color: $main-color;
         background: transparent;

@@ -52,6 +52,12 @@
         margin-top: 44px;
     }
 
+    @media screen and (min-width: 768px) {
+        &__diagram {
+            padding-left: 240px;
+        }
+    }
+
     &__diagram-box{
         flex-basis: calc(( 100% - 30px ) / 2);
         background-color: $background-light-color;
