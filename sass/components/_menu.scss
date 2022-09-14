@@ -2,17 +2,28 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: $background-main-color;
-    width: 75vw;
+    width: 100vw;
     height: calc(100vh - calc(100vh - 100%));
     z-index: 999;
     transform: translateX(100%);
+    background-color: transparent;
     transition: transform 300ms ease-in-out;
-    padding-top: 118px;
-    padding-left: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+  
+
+
+    &__container{
+        background-color: $background-main-color;
+        padding-top: 118px;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 75%;
+        margin-left: 25%;
+        height: 100%;  
+        
+    }
+    
 
     &__close-button{
         color: $main-color;
@@ -98,6 +109,43 @@
         &:focus{
             background-color: $accent-color;
             color: $light-color;
+        }
+    }
+
+    &__socials-list{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+   
+
+    &__socials-link{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.35;
+        letter-spacing: 0.2em;
+        color: $main-color;
+        padding-left: 100px;
+    }
+
+    &__socials-link--decorative{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.35;
+        letter-spacing: 0.2em;
+        color: $main-color;
+        position: relative;
+        padding-left: 100px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            width: 60px;
+            height: 1px;
+            background-color: $main-color;
         }
     }
 

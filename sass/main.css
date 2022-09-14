@@ -2,6 +2,7 @@
 /*Gradients*/
 /*Geometry*/
 /*Transition*/
+/*Shadows*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -40,6 +41,10 @@ a {
 
 .is-hidden {
   display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .header {
@@ -741,17 +746,23 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #FFFFFF;
-  width: 75vw;
+  width: 100vw;
   height: calc(100vh - (100vh - 100%));
   z-index: 999;
   transform: translateX(100%);
+  background-color: transparent;
   transition: transform 300ms ease-in-out;
+}
+.menu__container {
+  background-color: #FFFFFF;
   padding-top: 118px;
   padding-left: 40px;
   display: flex;
   flex-direction: column;
   gap: 60px;
+  width: 75%;
+  margin-left: 25%;
+  height: 100%;
 }
 .menu__close-button {
   color: #303030;
@@ -822,6 +833,37 @@ a {
 .menu__button:hover, .menu__button:focus {
   background-color: #FF6C00;
   color: #FFFFFF;
+}
+.menu__socials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.menu__socials-link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.35;
+  letter-spacing: 0.2em;
+  color: #303030;
+  padding-left: 100px;
+}
+.menu__socials-link--decorative {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.35;
+  letter-spacing: 0.2em;
+  color: #303030;
+  position: relative;
+  padding-left: 100px;
+}
+.menu__socials-link--decorative::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .is-open {
