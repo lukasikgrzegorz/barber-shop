@@ -1,18 +1,26 @@
 .team{
+    
+    &__section{
+        background-color: $background-light-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__container{
         flex-direction: column;
     }
 
-    @media screen and (min-width: 768px) {
-        &__container {
-            padding-left: 120px ;
-            padding-right: 120px;
-        }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        max-width: 418px;
     }
 
-    &__section{
-        background-color: $background-light-color;
+    @media screen and (min-width: 768px) {
+        &__wrapper {
+            max-width: 450px;
+        }
     }
 
     &__decorative-span {
@@ -26,6 +34,7 @@
         font-size: 11px;
         line-height: 1.36;
         letter-spacing: 0.1em;
+        align-self: flex-start;
 
         &::before {
             content: '';
@@ -46,6 +55,7 @@
         line-height: 1.17;
         letter-spacing: 0.05em;
         margin-top: 20px;
+        align-self: flex-start;
     }
 
     &__list{
@@ -62,6 +72,7 @@
     &__thumb{
         width: 100%;
         height: 346px;
+        margin: auto;
     }
 
     &__photo{

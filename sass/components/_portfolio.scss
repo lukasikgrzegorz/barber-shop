@@ -2,7 +2,22 @@
 
     &__container{
         flex-direction: column;
+        margin: auto;
+        align-items: center;
     }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 418px;
+    }
+
+    @media screen and (min-width: 768px) {
+        &__wrapper {max-width: none;}
+    }
+
+
     
     &__decorative-span {
         text-transform: uppercase;
