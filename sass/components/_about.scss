@@ -61,26 +61,26 @@
     
      
     &__decorative-span {
-     text-transform: uppercase;
-     color: $main-color;
-     position: relative;
-     padding-left: 80px;
-     font-family: 'Open Sans';
-     font-style: normal;
-     font-weight: 600;
-     font-size: 11px;
-     line-height: 1.36;
-     letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $main-color;
+        position: relative;
+        padding-left: 80px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0px;
-            width: 60px;
-            height: 1px;
-            background-color: $main-color;
-        }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                width: 60px;
+                height: 1px;
+                background-color: $main-color;
+            }
     }
 
     &__title{
@@ -112,6 +112,7 @@
         border-radius: 25px;
         width: 160px;
         height: 40px;
+        cursor: pointer;
         margin-top: 40px;
         transition: color $main-animation, 
                     background-color $main-animation;

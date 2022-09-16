@@ -4,12 +4,23 @@
     top: 0;
     left: 0;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 31px;
+
+    @media screen and (min-width: 768px) {
+        padding: 32px 39px 32px 50px;
+    }
 
     &__logo {
             color: $light-color;
-            position: absolute;
-            top: 40px;
-            left: 31px;
+        }
+
+        @media screen and(min-width: 768px) {
+            &__logo{
+                color: $main-color;
+            }
         }
     
         &__logo-icon {
@@ -17,17 +28,118 @@
             width: 69px;
             height: 55px;
         }
+
+        &__navigation{
+            display: flex;
+            align-items: flex-start;
+            gap: 71px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            &__navigation{
+            align-items: center;
+            }
+        }
+
+        &__navigation-list{
+            gap: 41px;
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            &__navigation-list{
+                display: flex;
+            }
+
+        }
+
+        &__navigation-link{
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 1.33;
+            letter-spacing: 0.1em;
+            color: $light-color;
+            transition: color $main-animation;
+
+            &:hover,
+            &:focus{
+                color: $accent-color;
+            }
+        }
+
+        &__contact-list{
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            &__contact-list{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                row-gap: 20px;
+                column-gap: 37px;
+                flex-grow: 0;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            &__contact-list{
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        &__contact-link{
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 1.33;
+            letter-spacing: 0.1em;
+            color: $light-color;
+            transition: color $main-animation;
+
+            &:hover,
+            &:focus{
+                color: $accent-color;
+            }
+        }
+
+        &__contact-button{
+            color: $light-color;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 1.33;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 1px $accent-color solid;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 160px;
+            height: 40px;
+            transition: color $main-animation, 
+                        background-color $main-animation;
+
+            &:hover,
+            &:focus{
+                background-color: $accent-color;
+                color: $light-color;
+        }
+    }
+
     
         &__menu {
-            position: absolute;
-            top: 48px;
-            right: 31px;
             background-color: transparent;
             border: none;
             color: $light-color;
             width: 40px;
             height: 40px;
             cursor: pointer;
+        }
+
+        @media screen and (min-width: 768px) {
+            &__menu{
+                display: none;
+            }
         }
     
         &__menu-icon {

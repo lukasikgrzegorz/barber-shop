@@ -44,6 +44,16 @@
         }
     }
 
+    &__socials-link{
+        color: $main-color;
+        transition: color $main-animation;
+
+        &:hover,
+        &:focus{
+            color: $accent-color;
+        }
+    }   
+
     &__copyright{
         font-weight: 600;
         font-size: 11px;
