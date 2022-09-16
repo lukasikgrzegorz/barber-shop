@@ -34,6 +34,12 @@ a{
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .section {
+        padding: $big-padding;
+    }
+}
+
 .container{
     max-width: 1200px;
     display: flex;
@@ -48,6 +54,16 @@ a{
     overflow: hidden;
 }
 
+.double-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+    .double-wrapper {
+        flex-direction: row;
+    }
+}
 
 
 

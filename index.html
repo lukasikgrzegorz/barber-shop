@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./sass/main.css">
     <title>Barber Shop</title>
@@ -89,6 +90,7 @@
             </div>
         </div>
 
+        <!--About-->
         <div class="about section">
             <div class="about__container container">
                 <div class="about__wrapper--aside">
@@ -117,78 +119,96 @@
                 </div>
             </div>
         </div>
+        <!------>
 
+        <!--Pricelist-->
         <div class="pricelist__section section">
             <div class="pricelist__container container">
                 <span class="pricelist__decorative-span">przyjdź do najlepsych barberów w swoim mieście</span>
                 <h2 class="pricelist__title">Usługi i ceny</h2>
 
-                <table class="pricelist__table">
-                    <tr class="pricelist__item">
-                        <td class="pricelist__name">Męskie strzyżenie</td>
-                        <td>od 100 zł.</td>
-                    </tr>
-                    <tr class="pricelist__item">
-                        <td class="pricelist__name">Strzyżenie brody</td>
-                        <td>od 75 zł.</td>
-                    </tr>
-                    <tr class="pricelist__item">
-                        <td class="pricelist__name">Strzyżenie wąsów</td>
-                        <td>od 50 zł.</td>
-                    </tr>
-                    <tr class="pricelist__item">
-                        <td class="pricelist__name">Golenie brzytwą</td>
-                        <td>od 75 zł.</td>
-                    </tr>
-                    <tr class="pricelist__item">
-                        <td class="pricelist__name">Strzyżenie jedna długość</td>
-                        <td>od 50 zł.</td>
-                    </tr>
-                    <tr class="pricelist__item">
-                        <td class="pricelist__name">Strzyżenie maszynką</td>
-                        <td>od 75 zł.</td>
-                    </tr>
-                    <tr class="pricelist__item">
-                        <td class="pricelist__name">Strzyżenie chłopca (do 12 lat)</td>
-                        <td>od 80 zł.</td>
-                    </tr>
-                    <tr class="pricelist__item">
-                        <td class="pricelist__name">Repigmentacja włosów</td>
-                        <td>od 100 zł.</td>
-                    </tr>
-                </table>
+                <div class="pricelist__wrapper">
+                    <table class="pricelist__table--up">
+                        <tr class="pricelist__item">
+                            <td class="pricelist__name">Męskie strzyżenie</td>
+                            <td>od 100 zł.</td>
+                        </tr>
+                        <tr class="pricelist__item">
+                            <td class="pricelist__name">Strzyżenie brody</td>
+                            <td>od 75 zł.</td>
+                        </tr>
+                        <tr class="pricelist__item">
+                            <td class="pricelist__name">Strzyżenie wąsów</td>
+                            <td>od 50 zł.</td>
+                        </tr>
+                        <tr class="pricelist__item">
+                            <td class="pricelist__name">Golenie brzytwą</td>
+                            <td>od 75 zł.</td>
+                        </tr>
+                    </table>
+                    <table class="pricelist__table--down">
+                        <tr class="pricelist__item">
+                            <td class="pricelist__name">Strzyżenie jedna długość</td>
+                            <td>od 50 zł.</td>
+                        </tr>
+                        <tr class="pricelist__item">
+                            <td class="pricelist__name">Strzyżenie maszynką</td>
+                            <td>od 75 zł.</td>
+                        </tr>
+                        <tr class="pricelist__item">
+                            <td class="pricelist__name">Strzyżenie chłopca (do 12 lat)</td>
+                            <td>od 80 zł.</td>
+                        </tr>
+                        <tr class="pricelist__item">
+                            <td class="pricelist__name">Repigmentacja włosów</td>
+                            <td>od 100 zł.</td>
+                        </tr>
+                    </table>
+                </div>
+
                 <button class="pricelist__button" type="button">rejestracja online</button>
             </div>
         </div>
+        <!------>
 
+        <!--Details-->
         <div class="details section">
             <div class="details__container container">
-                <span class="details__decorative-span">tradycyjna szkoła</span>
-                <h2 class="details__title">Dlaczego klienci przychodzą do nas?</h2>
-                <p class="details__paragraph">O nas mówią tylko dobrze. Ale najlepiej jeden raz zobaczyć i odczuć, niż
-                    10
-                    razy przeczytać.</p>
-                <div class="details__diagram">
-                    <div class="details__diagram-box">
-                        <span class="details__diagram-number">600</span>
-                        <p class="details__diagram-caption">Zadowolonych klientów dziennie</p>
-                    </div>
-                    <div class="details__diagram-box">
-                        <span class="details__diagram-number">50</span>
-                        <p class="details__diagram-caption">Nagród za najlepszą obsługę</p>
-                    </div>
-                    <div class="details__diagram-box">
-                        <span class="details__diagram-number">20</span>
-                        <p class="details__diagram-caption">Najlepszych barberów Warszawy</p>
-                    </div>
-                    <div class="details__diagram-box">
-                        <span class="details__diagram-number">100</span>
-                        <p class="details__diagram-caption">Prezentów stałym klientom</p>
+
+                <div class="details__wrapper">
+                    <span class="details__decorative-span">tradycyjna szkoła</span>
+                    <h2 class="details__title">Dlaczego klienci przychodzą do nas?</h2>
+                    <p class="details__paragraph">O nas mówią tylko dobrze. Ale najlepiej jeden raz zobaczyć i odczuć,
+                        niż 10 razy przeczytać.
+                    </p>
+                </div>
+
+                <div class="details__wrapper">
+                    <div class="details__diagram">
+                        <div class="details__diagram-box">
+                            <span class="details__diagram-number">600</span>
+                            <p class="details__diagram-caption">Zadowolonych klientów dziennie</p>
+                        </div>
+                        <div class="details__diagram-box">
+                            <span class="details__diagram-number">50</span>
+                            <p class="details__diagram-caption">Nagród za najlepszą obsługę</p>
+                        </div>
+                        <div class="details__diagram-box">
+                            <span class="details__diagram-number">20</span>
+                            <p class="details__diagram-caption">Najlepszych barberów Warszawy</p>
+                        </div>
+                        <div class="details__diagram-box">
+                            <span class="details__diagram-number">100</span>
+                            <p class="details__diagram-caption">Prezentów stałym klientom</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
+        <!------>
 
+        <!--Team-->
         <div class="team__section section">
             <div class="team__container container">
                 <div class="team__wrapper">
@@ -320,7 +340,9 @@
                 </div>
             </div>
         </div>
+        <!------>
 
+        <!--Portfolio-->
         <div class="portfolio section">
             <div class="portfolio__container container">
                 <div class="portfolio__wrapper">
@@ -347,63 +369,74 @@
 
             </div>
         </div>
+        <!------>
 
-        <div class="reservation__section section" id="reservation">
-            <div class="reservation__container container">
-                <h2 class="reservation__title">Rezerwacja online</h2>
-                <form class="reservation__form">
-                    <input class="reservation__input" type="name" id="name" placeholder="Imię*">
-                    <input class="reservation__input" type="phone" id="phone" placeholder="Telefon">
-                    <textarea class="reservation__textarea" name="message" id="message"
-                        placeholder="Wiadomość"></textarea>
-                    <button class="reservation__button">wyślij</button>
-                </form>
+        <div class="double-wrapper">
+
+            <!--Reservation-->
+            <div class="reservation__section section" id="reservation">
+                <div class="reservation__container container">
+                    <h2 class="reservation__title">Rezerwacja online</h2>
+                    <form class="reservation__form">
+                        <input class="reservation__input" type="name" id="name" placeholder="Imię*">
+                        <input class="reservation__input" type="phone" id="phone" placeholder="Telefon">
+                        <textarea class="reservation__textarea" name="message" id="message"
+                            placeholder="Wiadomość"></textarea>
+                        <button class="reservation__button">wyślij</button>
+                    </form>
+                </div>
             </div>
-        </div>
+            <!------>
 
-        <div class="contact__section section">
-            <div class="contact__container">
-                <h2 class="contact__title">Kontakt</h2>
-                <div class="contact__wrapper">
-                    <ul class="contact__list">
-                        <il class="contact__item">
-                            <div class="contact__icon-wrapper">
-                                <svg class="contact__icon">
-                                    <use href="./images/icons.svg#icon-map-pin"></use>
-                                </svg>
-                            </div>
-                            <address class="contact__text">
-                                ul. Prosta 20 Warszawa, 00-001
-                            </address>
-                        </il>
-                        <il class="contact__item">
-                            <div class="contact__icon-wrapper">
-                                <svg class="contact__icon">
-                                    <use href="./images/icons.svg#icon-phone"></use>
-                                </svg>
-                            </div>
-                            <a class="contact__text" href="tel:+48111111111">+48 111 111 111</a>
-                        </il>
-                        <il class="contact__item">
-                            <div class="contact__icon-wrapper">
-                                <svg class="contact__icon">
-                                    <use href="./images/icons.svg#icon-mail"></use>
-                                </svg>
-                            </div>
-                            <a class="contact__text--underline"
-                                href="mailto:barbershop@email.com">barbershop@email.com</a>
-                        </il>
-                    </ul>
-                    <div class="contact__open-info">
-                        <span class="contact__decorative-span">
-                            godziny otwarcia
-                        </span>
-                        <span class="contact__text">Codziennie od 9:00 do 22:00</span>
+            <!--Contact-->
+            <div class="contact__section section">
+                <div class="contact__container">
+                    <h2 class="contact__title">Kontakt</h2>
+                    <div class="contact__wrapper">
+                        <ul class="contact__list">
+                            <il class="contact__item">
+                                <div class="contact__icon-wrapper">
+                                    <svg class="contact__icon">
+                                        <use href="./images/icons.svg#icon-map-pin"></use>
+                                    </svg>
+                                </div>
+                                <address class="contact__text">
+                                    ul. Prosta 20 Warszawa, 00-001
+                                </address>
+                            </il>
+                            <il class="contact__item">
+                                <div class="contact__icon-wrapper">
+                                    <svg class="contact__icon">
+                                        <use href="./images/icons.svg#icon-phone"></use>
+                                    </svg>
+                                </div>
+                                <a class="contact__text" href="tel:+48111111111">+48 111 111 111</a>
+                            </il>
+                            <il class="contact__item">
+                                <div class="contact__icon-wrapper">
+                                    <svg class="contact__icon">
+                                        <use href="./images/icons.svg#icon-mail"></use>
+                                    </svg>
+                                </div>
+                                <a class="contact__text--underline"
+                                    href="mailto:barbershop@email.com">barbershop@email.com</a>
+                            </il>
+                        </ul>
+                        <div class="contact__open-info">
+                            <span class="contact__decorative-span">
+                                godziny otwarcia
+                            </span>
+                            <span class="contact__text">Codziennie od 9:00 do 22:00</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!------>
+
     </main>
+
+    <!--Footer-->
     <footer>
         <div class="footer__section">
             <div class="footer__container container">
@@ -415,6 +448,7 @@
             </div>
         </div>
     </footer>
+    <!------>
 
 </body>
 

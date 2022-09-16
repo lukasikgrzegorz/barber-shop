@@ -4,11 +4,18 @@
         background-color: $background-dark-color;
     }
 
+    @media screen and (min-width: 1200px) {
+        &__section {
+            flex-basis: 50%;
+        }
+    }
+
     &__container{
         flex-direction: column;
     }
 
     &__title{
+        font-family: 'Raleway';
         color: $light-color;
         font-weight: 700;
         font-size: 42px;

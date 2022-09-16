@@ -3,6 +3,12 @@
     &__container{
         flex-direction: column;
     }
+
+    @media screen and (min-width: 1200px) {
+        &__container {
+                flex-direction: row-reverse
+        }
+    }
     
     &__decorative-span {
         text-transform: uppercase;
@@ -45,16 +51,31 @@
         color: $secondary-color;
     }
 
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (min-width:1200px) {
+        &__wrapper {
+            flex-basis: 50%;
+        }
+    }
+
     &__diagram{
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
         margin-top: 44px;
+        max-width: 450px;
+        align-self: end;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:1200px) {
         &__diagram {
-            padding-left: 240px;
+            align-self: center;
+            margin-top: 0px;
+            max-width: 370px;
         }
     }
 
@@ -77,6 +98,7 @@
     &__diagram-number{
         font-family: 'Open Sans';
         font-style: normal;
+        font-style: bold;
         font-weight: 700;
         font-size: 42px;
         line-height: 1.35;

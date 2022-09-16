@@ -10,6 +10,48 @@
         flex-direction: column;
     }
 
+    &__wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 44px;
+        background: $pricelist-backgroud;
+        row-gap: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__wrapper{
+            flex-direction: row;
+            background: transparent;
+            background: $pricelist-backgroud;
+        }
+    }
+
+    &__table--up{
+        padding: 30px 30px 0px 30px; 
+        width: 100%; 
+    }
+
+    @media screen and(min-width:1200px) {
+        &__table--up{
+            padding: 30px 30px 30px 30px;
+            background: $pricelist-backgroud;
+        }
+    }
+
+    &__table--down{
+        padding: 0px 30px 30px 30px;
+        width: 100%;  
+    }
+
+    @media screen and(min-width:1200px) {
+        &__table--down{
+            padding: 30px 30px 30px 30px;
+            background: $pricelist-backgroud-secondary;
+        }
+    }
+
+
     &__decorative-span {
         text-transform: uppercase;
         color: $decoration-span-dark-color;
@@ -35,19 +77,13 @@
         }
 
     &__title{
+        font-family: 'Raleway';
         font-weight: 700;
         font-size: 42px;
         line-height: 1.16;
         letter-spacing: 0.05em;
         color: $light-color;
         margin-top: 20px;
-    }
-
-    &__table{
-        background: $pricelist-backgroud;
-        margin-top: 44px;
-        padding: 30px;
-       
     }
 
     &__item{

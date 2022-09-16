@@ -23,6 +23,12 @@
         }
     }
 
+    @media screen and (min-width: 1200px) {
+        &__wrapper {
+            max-width: none;
+        }
+    }
+
     &__decorative-span {
         text-transform: uppercase;
         color: $main-color;
@@ -62,11 +68,18 @@
         margin-top: 44px;
         display: flex;
         row-gap: 64px;
+        column-gap: 30px;
         flex-wrap: wrap;
     }
 
     &__item{
         flex-basis: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__item {
+            flex-basis: calc((100% - 60px) / 3)
+        }
     }
 
     &__thumb{

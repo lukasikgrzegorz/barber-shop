@@ -38,6 +38,11 @@ a {
     padding: 100px 39px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 130px 54px;
+  }
+}
 .container {
   max-width: 1200px;
   display: flex;
@@ -52,6 +57,16 @@ a {
   overflow: hidden;
 }
 
+.double-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .double-wrapper {
+    flex-direction: row;
+  }
+}
 .header {
   position: absolute;
   width: 100%;
@@ -177,11 +192,24 @@ a {
     flex-direction: column;
     flex-basis: calc((100% - 30px) / 2);
     gap: 30px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__wrapper--aside {
+    flex-direction: row;
   }
 }
 .about__wrapper-thumb {
-  width: 100%;
+  max-width: 330px;
   height: 235px;
+}
+@media screen and (min-width: 1200px) {
+  .about__wrapper-thumb {
+    flex-basis: calc((100% - 30px) / 2);
+    max-width: 270px;
+    height: 445px;
+  }
 }
 .about__image {
   -o-object-fit: cover;
@@ -254,6 +282,41 @@ a {
 .pricelist__container {
   flex-direction: column;
 }
+.pricelist__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 44px;
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  row-gap: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .pricelist__wrapper {
+    flex-direction: row;
+    background: transparent;
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+.pricelist__table--up {
+  padding: 30px 30px 0px 30px;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .pricelist__table--up {
+    padding: 30px 30px 30px 30px;
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+.pricelist__table--down {
+  padding: 0px 30px 30px 30px;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .pricelist__table--down {
+    padding: 30px 30px 30px 30px;
+    background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
+}
 .pricelist__decorative-span {
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
@@ -276,17 +339,13 @@ a {
   background-color: rgba(157, 164, 189, 0.6);
 }
 .pricelist__title {
+  font-family: "Raleway";
   font-weight: 700;
   font-size: 42px;
   line-height: 1.16;
   letter-spacing: 0.05em;
   color: #FFFFFF;
   margin-top: 20px;
-}
-.pricelist__table {
-  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
-  margin-top: 44px;
-  padding: 30px;
 }
 .pricelist__item {
   color: #9DA4BD;
@@ -331,6 +390,11 @@ a {
 .details__container {
   flex-direction: column;
 }
+@media screen and (min-width: 1200px) {
+  .details__container {
+    flex-direction: row-reverse;
+  }
+}
 .details__decorative-span {
   text-transform: uppercase;
   color: #303030;
@@ -368,15 +432,28 @@ a {
   margin-top: 20px;
   color: #555555;
 }
+.details__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .details__wrapper {
+    flex-basis: 50%;
+  }
+}
 .details__diagram {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 44px;
+  max-width: 450px;
+  align-self: end;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .details__diagram {
-    padding-left: 240px;
+    align-self: center;
+    margin-top: 0px;
+    max-width: 370px;
   }
 }
 .details__diagram-box {
@@ -396,6 +473,7 @@ a {
 .details__diagram-number {
   font-family: "Open Sans";
   font-style: normal;
+  font-style: bold;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.35;
@@ -439,6 +517,11 @@ a {
     max-width: 450px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .team__wrapper {
+    max-width: none;
+  }
+}
 .team__decorative-span {
   text-transform: uppercase;
   color: #303030;
@@ -475,10 +558,17 @@ a {
   margin-top: 44px;
   display: flex;
   row-gap: 64px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   flex-wrap: wrap;
 }
 .team__item {
   flex-basis: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .team__thumb {
   width: 100%;
@@ -561,6 +651,7 @@ a {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
+  align-self: start;
 }
 .portfolio__decorative-span::before {
   content: "";
@@ -586,6 +677,11 @@ a {
     flex-basis: calc((100% - 30px) / 2);
   }
 }
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    flex-basis: calc((100% - 120px) / 4);
+  }
+}
 .portfolio__thumb {
   width: 100%;
   height: 360px;
@@ -600,10 +696,16 @@ a {
 .reservation__section {
   background-color: #191C26;
 }
+@media screen and (min-width: 1200px) {
+  .reservation__section {
+    flex-basis: 50%;
+  }
+}
 .reservation__container {
   flex-direction: column;
 }
 .reservation__title {
+  font-family: "Raleway";
   color: #FFFFFF;
   font-weight: 700;
   font-size: 42px;
@@ -705,12 +807,19 @@ a {
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 1200px) {
+  .contact__section {
+    flex-basis: 50%;
+    padding: 130px 100px;
+  }
+}
 .contact__container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .contact__title {
+  font-family: "Raleway";
   color: #FFFFFF;
   font-weight: 700;
   font-size: 42px;
@@ -728,6 +837,12 @@ a {
   .contact__wrapper {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__wrapper {
+    flex-direction: column;
+    gap: 72px;
   }
 }
 .contact__list {
