@@ -50,6 +50,10 @@ a{
     display: none;
 }
 
+.is-invisible {
+    opacity: 0;
+}
+
 .no-scroll{
     overflow: hidden;
 }

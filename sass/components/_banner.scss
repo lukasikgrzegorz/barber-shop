@@ -78,13 +78,18 @@
 
     &__slider-thumb{
         width: 100%;
-        height: 100%
+        height: 100%;
+        position: relative;
     }
 
      &__slider-item{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover;  
+        position: absolute;
+        top:0;
+        left:0;
+        transition: opacity 1ms linear;
     }
 
     &__slider-wrapper{

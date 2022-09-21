@@ -117,9 +117,9 @@
             <!--Slider-->
             <div class="banner__slider">
                 <div class="banner__slider-thumb">
-                    <img class="banner__slider-item" src="./images/slider-img1.jpg" alt="">
-                    <img class="banner__slider-item is-hidden" src="./images/slider-img2.jpg" alt="">
-                    <img class="banner__slider-item is-hidden" src="./images/slider-img3.jpg" alt="">
+                    <img class="banner__slider-item" slider-image-1 src="./images/slider-img1.jpg" alt="">
+                    <img class="banner__slider-item is-invisible"  slider-image-2 src="./images/slider-img2.jpg" alt="">
+                    <img class="banner__slider-item is-invisible" slider-image-3 src="./images/slider-img3.jpg" alt="">
                 </div>
                 <div class="banner__slider-wrapper">
                     <div class="banner__slider-caption">
@@ -127,6 +127,8 @@
                         <h1 class="banner__slider-title">BarberShop</h1>
                         <p class="banner__slider-paragraph">Jesteśmy ekspertami w strzyżeniu.
                             Pracujemy szybko, ostrożnie i elegancko.</p>
+                        <button type="button" slider-next-btn>next</button>
+                        <button type="button" slider-prev-btn>prev</button>
                     </div>
                 </div>
             </div>
@@ -500,5 +502,6 @@
 </body>
 
 <script src="./js/mobile-menu.js"></script>
+<script src="./js/slider.js"></script>
 
 </html>
