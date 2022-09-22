@@ -1,0 +1,20 @@
+$colors:(
+    "main-color": #303030,
+    "secondary-color": #555555,
+    "light-color": #FFFFFF,
+    "secondary-light-color": #9DA4BD,
+    "accent-color": #FF6C00,
+    "background-main-color": #FFFFFF,
+    "background-light-color": #F7F7F7,
+    "background-dark-color": #191C26,
+    "slider-background-color": rgba(25, 28, 38, 0.2),
+    "decoration-span-dark-color": rgba(157, 164, 189, 0.6),
+    "reservation-color": rgba(157, 164, 189, 0.4),
+    "contact-decorative-spn-color": rgba(157, 164, 189, 0.4),
+    "menu-background-color": rgba(25, 28, 38, 0.2),
+);
+
+@function getColor($key){
+    @return map-get($colors, $key);
+}
+    

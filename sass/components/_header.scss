@@ -1,3 +1,5 @@
+@use './../utils' as *;
+
 .header{
     position: absolute;
     width: 100%;
@@ -8,143 +10,144 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px 31px;
+}
 
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+    .header{
         padding: 32px 39px 32px 50px;
+    }   
+}
+
+.header__logo {
+    color: getColor("light-color");
+}
+
+@media screen and(min-width: 768px) {
+    .header__logo{
+        color: getColor("main-color");
+    }
+}
+
+.header__logo-icon {
+    fill: currentColor;
+    width: 69px;
+    height: 55px;
+}
+
+.header__navigation{
+    display: flex;
+    align-items: flex-start;
+    gap: 71px;
+}
+
+@media screen and (min-width: 1200px) {
+    .header__navigation{
+    align-items: center;
+    }
+}
+
+.header__navigation-list{
+    gap: 41px;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .header__navigation-list{
+        display: flex;
     }
 
-    &__logo {
-            color: $light-color;
-        }
+}
 
-        @media screen and(min-width: 768px) {
-            &__logo{
-                color: $main-color;
-            }
-        }
-    
-        &__logo-icon {
-            fill: currentColor;
-            width: 69px;
-            height: 55px;
-        }
+.header__navigation-link{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: getColor("light-color");
+    transition: color $main-animation;
 
-        &__navigation{
-            display: flex;
-            align-items: flex-start;
-            gap: 71px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            &__navigation{
-            align-items: center;
-            }
-        }
-
-        &__navigation-list{
-            gap: 41px;
-            display: none;
-        }
-
-        @media screen and (min-width: 768px) {
-            &__navigation-list{
-                display: flex;
-            }
-
-        }
-
-        &__navigation-link{
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 1.33;
-            letter-spacing: 0.1em;
-            color: $light-color;
-            transition: color $main-animation;
-
-            &:hover,
-            &:focus{
-                color: $accent-color;
-            }
-        }
-
-        &__contact-list{
-            display: none;
-        }
-
-        @media screen and (min-width: 768px) {
-            &__contact-list{
-                display: flex;
-                flex-direction: column-reverse;
-                align-items: center;
-                row-gap: 20px;
-                column-gap: 37px;
-                flex-grow: 0;
-            }
-        }
-
-        @media screen and (min-width: 1200px) {
-            &__contact-list{
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-
-        &__contact-link{
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 1.33;
-            letter-spacing: 0.1em;
-            color: $light-color;
-            transition: color $main-animation;
-
-            &:hover,
-            &:focus{
-                color: $accent-color;
-            }
-        }
-
-        &__contact-button{
-            color: $light-color;
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 1.33;
-            letter-spacing: 0.09em;
-            text-transform: uppercase;
-            background-color: transparent;
-            border: 1px $accent-color solid;
-            border-radius: 25px;
-            cursor: pointer;
-            width: 160px;
-            height: 40px;
-            transition: color $main-animation, 
-                        background-color $main-animation;
-
-            &:hover,
-            &:focus{
-                background-color: $accent-color;
-                color: $light-color;
-        }
+    &:hover,
+    &:focus{
+        color: getColor("accent-color");
     }
+}
 
-    
-        &__menu {
-            background-color: transparent;
-            border: none;
-            color: $light-color;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-        }
+.header__contact-list{
+    display: none;
+}
 
-        @media screen and (min-width: 768px) {
-            &__menu{
-                display: none;
-            }
-        }
-    
-        &__menu-icon {
-            fill: currentColor;
-            width: 24px;
-            height: 16px; 
-        }
+@media screen and (min-width: 768px) {
+    .header__contact-list{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 20px;
+        column-gap: 37px;
+        flex-grow: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header__contact-list{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.header__contact-link{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: getColor("light-color");
+    transition: color $main-animation;
+
+    &:hover,
+    &:focus{
+        color: getColor("accent-color");
+    }
+}
+
+.header__contact-button{
+    color: getColor("light-color");
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px getColor("accent-color") solid;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 160px;
+    height: 40px;
+    transition: color $main-animation, 
+                background-color $main-animation;
+
+    &:hover,
+    &:focus{
+        background-color: getColor("accent-color");
+        color: getColor("light-color");
+}
+}
+
+.header__menu {
+    background-color: transparent;
+    border: none;
+    color: getColor("light-color");
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .header__menu{
+        display: none;
+    }
+}
+
+.header__menu-icon {
+    fill: currentColor;
+    width: 24px;
+    height: 16px; 
 }

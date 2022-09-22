@@ -1,14 +1,13 @@
-@import './utils/variables.scss';
-
-@import './components/_commons.scss';
-@import './components/_header.scss';
-@import './components/_banner.scss';
-@import './components/_about.scss';
-@import './components/_pricelist.scss';
-@import './components/_details.scss';
-@import './components/_team.scss';
-@import './components/_portfolio.scss';
-@import './components/_reservation.scss';
-@import './components/_contact.scss';
-@import './components/_footer.scss';
-@import './components/_menu.scss';
+@use './components/commons';
+@use './components/header';
+@use './components/banner';
+@use './components/about';
+@use './components/pricelist';
+@use './components/details';
+@use './components/team';
+@use './components/portfolio';
+@use './components/reservation';
+@use './components/contact';
+@use './components/footer';
+@use './components/menu';
+    

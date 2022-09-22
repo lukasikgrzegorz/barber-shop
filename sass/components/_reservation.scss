@@ -1,116 +1,115 @@
-.reservation{
-    
-    &__section{
-        background-color: $background-dark-color;
+@use './../utils' as *;
+   
+.reservation__section{
+    background-color: getColor("background-dark-color");
+}
+
+@media screen and (min-width: 1200px) {
+    .reservation__section {
+        flex-basis: 50%;
+    }
+}
+
+.reservation__container{
+    flex-direction: column;
+}
+
+.reservation__title{
+    font-family: 'Raleway';
+    color: getColor("light-color");
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.reservation__form{
+    margin-top: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.reservation__input{
+    color: getColor("reservation-color");
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    flex-basis: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 8px;
+    border-bottom: 1px solid;
+
+    &::placeholder{
+        color: currentColor;
     }
 
-    @media screen and (min-width: 1200px) {
-        &__section {
-            flex-basis: 50%;
-        }
+    &:hover,
+    &:focus{
+        color: getColor("light-color");
+    }
+}
+
+.reservation__textarea{
+    color: getColor("reservation-color");
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-bottom: 8px;
+    border-bottom: 1px solid;
+    resize: none;
+    height: 76px;
+
+    &::placeholder{
+        color: currentColor;
     }
 
-    &__container{
-        flex-direction: column;
+    &:hover,
+    &:focus{
+        color: getColor("light-color");
     }
+}
 
-    &__title{
-        font-family: 'Raleway';
-        color: $light-color;
-        font-weight: 700;
-        font-size: 42px;
-        line-height: 1.16;
-        letter-spacing: 0.05em;
-        text-align: center;
+.reservation__button{
+    align-self: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px getColor("accent-color") solid;
+    border-radius: 25px;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+    color: getColor("light-color");
+    transition: color $main-animation, 
+                background-color $main-animation;
+
+    &:hover,
+    &:focus{
+        background-color: getColor("accent-color");
+        color: getColor("light-color");
     }
+}
 
-    &__form{
-        margin-top: 44px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        gap: 44px;
-    }
-
-    &__input{
-        color: $reservation-color;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 11px;
-        line-height: 15px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        flex-basis: 100%;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        padding-bottom: 8px;
-        border-bottom: 1px solid;
-
-        &::placeholder{
-            color: currentColor;
-        }
-
-        &:hover,
-        &:focus{
-            color: $light-color;
-        }
-    }
-
-    &__textarea{
-        color: $reservation-color;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 11px;
-        line-height: 15px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        width: 100%;
-        padding-bottom: 8px;
-        border-bottom: 1px solid;
-        resize: none;
-        height: 76px;
-
-        &::placeholder{
-            color: currentColor;
-        }
-
-        &:hover,
-        &:focus{
-            color: $light-color;
-        }
-    }
-
-    &__button{
-        align-self: center;
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 1.33;
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
-        background-color: transparent;
-        border: 1px $accent-color solid;
-        border-radius: 25px;
-        width: 160px;
-        height: 40px;
-        cursor: pointer;
-        color: $light-color;
-        transition: color $main-animation, 
-                    background-color $main-animation;
-
-        &:hover,
-        &:focus{
-            background-color: $accent-color;
-            color: $light-color;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        &__button{
-            align-self: flex-start;
-        }
+@media screen and (min-width: 768px) {
+    .reservation__button{
+        align-self: flex-start;
     }
 }

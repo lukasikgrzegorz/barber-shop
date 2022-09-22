@@ -1,3 +1,5 @@
+@use './../utils' as *;
+
 .menu{
     position: fixed;
     top: 0;
@@ -8,146 +10,140 @@
     transform: translateX(100%);
     background-color: transparent;
     transition: transform 300ms ease-in-out;
+}    
+.menu__container{
+    background-color: getColor("background-main-color");
+    padding-top: 118px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 75%;
+    margin-left: 25%;
+    height: 100%;  
+    box-shadow: $menu-container-shadow;
     
-    &__container{
-        background-color: $background-main-color;
-        padding-top: 118px;
-        padding-left: 40px;
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        width: 75%;
-        margin-left: 25%;
-        height: 100%;  
-        box-shadow: $menu-container-shadow;
+}
+
+.menu__close-button{
+    color: getColor("main-color");
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 48px;
+    right: 31px;
+    cursor: pointer;
+}
+
+.menu__close-icon{
+    width: 19px;
+    height: 19px;
+    fill: currentColor;
+}
+
+.menu__navigation-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.menu__navigation-link{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.38px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: getColor("main-color");
+    transition: color $main-animation;
+
+    &:hover,
+    &:focus{
+        color: getColor("accent-color");
         
     }
-    
-    &__close-button{
-        color: $main-color;
-        background: transparent;
-        border: none;
-        width: 40px;
-        height: 40px;
+}
+
+.menu__contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.menu__contact-link{
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.38;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: getColor("main-color");
+    transition: color $main-animation;
+
+    &:hover,
+    &:focus{
+        color: getColor("accent-color");
+        
+    }
+}
+
+.menu__button{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px getColor("accent-color") solid;
+    border-radius: 25px;
+    width: 160px;
+    height: 40px;
+    color: getColor("main-color");
+    transition: color $main-animation, 
+                background-color $main-animation;
+
+    &:hover,
+    &:focus{
+        background-color: getColor("accent-color");
+        color: getColor("light-color");
+    }
+}
+
+.menu__socials-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.menu__socials-link{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.2em;
+    color: getColor("main-color");
+    padding-left: 100px;
+}
+
+.menu__socials-link--decorative{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.2em;
+    color: getColor("main-color");
+    position: relative;
+    padding-left: 100px;
+
+    &::before {
+        content: '';
         position: absolute;
-        top: 48px;
-        right: 31px;
-        cursor: pointer;
-
+        top: 50%;
+        left: 0px;
+        width: 60px;
+        height: 1px;
+        background-color: getColor("main-color");
     }
-
-    &__close-icon{
-        width: 19px;
-        height: 19px;
-        fill: currentColor;
-    }
-
-    &__navigation-list{
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    &__navigation-link{
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 1.38px;
-        text-align: center;
-        letter-spacing: 0.1em;
-        color: $main-color;
-        transition: color $main-animation;
-
-        &:hover,
-        &:focus{
-            color: $accent-color;
-           
-        }
-    }
-
-    &__contact{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-    }
-
-    &__contact-link{
-        display: block;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 1.38;
-        text-align: center;
-        letter-spacing: 0.1em;
-        color: $main-color;
-        transition: color $main-animation;
-
-        &:hover,
-        &:focus{
-            color: $accent-color;
-           
-        }
-    }
-
-    &__button{
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 1.33;
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
-        background-color: transparent;
-        border: 1px $accent-color solid;
-        border-radius: 25px;
-        width: 160px;
-        height: 40px;
-        color: $main-color;
-        transition: color $main-animation, 
-                    background-color $main-animation;
-
-        &:hover,
-        &:focus{
-            background-color: $accent-color;
-            color: $light-color;
-        }
-    }
-
-    &__socials-list{
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-
-   
-
-    &__socials-link{
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 1.35;
-        letter-spacing: 0.2em;
-        color: $main-color;
-        padding-left: 100px;
-    }
-
-    &__socials-link--decorative{
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 1.35;
-        letter-spacing: 0.2em;
-        color: $main-color;
-        position: relative;
-        padding-left: 100px;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0px;
-            width: 60px;
-            height: 1px;
-            background-color: $main-color;
-        }
-    }
-
-
 }
 
 .is-open {

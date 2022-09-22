@@ -1,128 +1,124 @@
-.about{
+@use './../utils' as *;
 
-    &__container{
+.about__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px; 
+}
+
+.about__wrapper{
+    flex-basis: 100%
+}
+
+@media screen and (min-width: 768px) {
+    .about__wrapper{
+        flex-basis: calc((100% - 30px) / 2);
+    }
+}
+
+.about__wrapper--aside{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .about__wrapper--aside {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-basis: calc((100% - 30px) / 2);
         gap: 30px;
-      
+        align-items: center;
     }
+}
 
-    &__wrapper{
-        flex-basis: 100%
+@media screen and (min-width: 1200px) {
+    .about__wrapper--aside {
+        flex-direction: row;
     }
+}
 
-    @media screen and (min-width: 768px) {
-        &__wrapper{
-            flex-basis: calc((100% - 30px) / 2);
-        }
-    }
+.about__wrapper-thumb{
+    max-width: 330px ;
+    height: 235px;
+}
 
-    &__wrapper--aside{
-        display: none;
+
+@media screen and (min-width: 1200px) {
+    .about__wrapper-thumb{
+        flex-basis: calc((100% - 30px)/2);
+        max-width: 270px;
+        height: 445px;
     }
+}
+
+
+.about__image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
     
-    @media screen and (min-width: 768px) {
-        &__wrapper--aside {
-            display: flex;
-            flex-direction: column;
-            flex-basis: calc((100% - 30px) / 2);
-            gap: 30px;
-            align-items: center;
+.about__decorative-span {
+    text-transform: uppercase;
+    color: getColor("main-color");
+    position: relative;
+    padding-left: 80px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            width: 60px;
+            height: 1px;
+            background-color: getColor("main-color");
         }
+}
+
+.about__title{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+}
+
+.about__paragraph{
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    margin-top: 20px;
+    color: getColor("secondary-color");
+}
+
+.about__button{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px getColor("accent-color") solid;
+    border-radius: 25px;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: color $main-animation, 
+                background-color $main-animation;
+
+    &:hover,
+    &:focus{
+        background-color: getColor("accent-color");
+        color: getColor("light-color");
     }
-
-    @media screen and (min-width: 1200px) {
-        &__wrapper--aside {
-            flex-direction: row;
-        }
-    }
-
-    &__wrapper-thumb{
-        max-width: 330px ;
-        height: 235px;
-    }
-
- 
-    @media screen and (min-width: 1200px) {
-        &__wrapper-thumb{
-            flex-basis: calc((100% - 30px)/2);
-            max-width: 270px;
-            height: 445px;
-        }
-    }
-
-
-    &__image{
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-    
-     
-    &__decorative-span {
-        text-transform: uppercase;
-        color: $main-color;
-        position: relative;
-        padding-left: 80px;
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 11px;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 0px;
-                width: 60px;
-                height: 1px;
-                background-color: $main-color;
-            }
-    }
-
-    &__title{
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 1.17;
-        letter-spacing: 0.05em;
-        margin-top: 20px;
-    }
-
-    &__paragraph{
-        font-size: 14px;
-        line-height: 1.86;
-        letter-spacing: 0.02em;
-        margin-top: 20px;
-        color: $secondary-color;
-    }
-
-    &__button{
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 1.33;
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
-        background-color: transparent;
-        border: 1px $accent-color solid;
-        border-radius: 25px;
-        width: 160px;
-        height: 40px;
-        cursor: pointer;
-        margin-top: 40px;
-        transition: color $main-animation, 
-                    background-color $main-animation;
-
-        &:hover,
-        &:focus{
-            background-color: $accent-color;
-            color: $light-color;
-        }
-    }
-
-
 }
