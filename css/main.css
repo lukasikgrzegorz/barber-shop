@@ -508,8 +508,8 @@ a {
 }
 
 .about__decorative-span {
-  text-transform: uppercase;
   color: #303030;
+  text-transform: uppercase;
   position: relative;
   padding-left: 80px;
   font-family: "Open Sans";
@@ -526,7 +526,7 @@ a {
   left: 0px;
   width: 60px;
   height: 1px;
-  background-color: #303030;
+  background-color: currentColor;
 }
 
 .about__title {
@@ -633,8 +633,8 @@ a {
   }
 }
 .pricelist__decorative-span {
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
+  text-transform: uppercase;
   position: relative;
   padding-left: 80px;
   font-family: "Open Sans";
@@ -651,7 +651,7 @@ a {
   left: 0px;
   width: 60px;
   height: 1px;
-  background-color: rgba(157, 164, 189, 0.6);
+  background-color: currentColor;
 }
 
 .pricelist__title {
@@ -733,8 +733,8 @@ a {
   }
 }
 .details__decorative-span {
-  text-transform: uppercase;
   color: #303030;
+  text-transform: uppercase;
   position: relative;
   padding-left: 80px;
   font-family: "Open Sans";
@@ -751,7 +751,7 @@ a {
   left: 0px;
   width: 60px;
   height: 1px;
-  background-color: #303030;
+  background-color: currentColor;
 }
 
 .details__title {
