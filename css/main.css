@@ -52,9 +52,31 @@ a {
 }
 
 .is-invisible {
-  opacity: 0;
+  display: none;
 }
 
+.is-faded {
+  -webkit-animation: fadeIn 500ms ease-in;
+          animation: fadeIn 500ms ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 .no-scroll {
   overflow: hidden;
 }
@@ -340,8 +362,6 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: opacity 1ms linear;
-  transition: opacity 1ms linear;
 }
 
 .banner__slider-wrapper {
@@ -358,7 +378,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  banner__slider-wrapper {
+  .banner__slider-wrapper {
     padding-top: 272px;
     padding-left: 100px;
   }
@@ -369,12 +389,12 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  banner__slider-caption {
+  .banner__slider-caption {
     max-width: 355px;
   }
 }
 @media screen and (min-width: 1200px) {
-  banner__slider-caption {
+  .banner__slider-caption {
     max-width: 500px;
   }
 }
@@ -411,7 +431,7 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  banner__slider-title {
+  .banner__slider-title {
     font-size: 72px;
     line-height: 1.18;
     letter-spacing: 0.05em;
@@ -429,11 +449,51 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  banner__slider-paragraph {
+  .banner__slider-paragraph {
     font-size: 18px;
     max-width: 363px;
   }
 }
+.banner__slider-buttons {
+  position: absolute;
+  bottom: 40px;
+  right: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 26px;
+}
+
+.banner__slider-button {
+  width: 60px;
+  height: 24px;
+  color: rgba(157, 164, 189, 0.6);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  border: none;
+  border-bottom: 1px currentColor solid;
+  text-transform: capitalize;
+  background-color: transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.banner__slider-button:hover, .banner__slider-button:focus {
+  color: #FFFFFF;
+}
+
+.banner__slider-button--next {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .about__container {
   display: -webkit-box;
   display: -ms-flexbox;

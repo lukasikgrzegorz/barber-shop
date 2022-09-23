@@ -85,7 +85,6 @@
     position: absolute;
     top:0;
     left:0;
-    transition: opacity 1ms linear;
 }
 
 .banner__slider-wrapper{
@@ -102,7 +101,7 @@
 }
 
 @media screen and(min-width: 768px) {
-    banner__slider-wrapper{
+    .banner__slider-wrapper{
         padding-top: 272px;
         padding-left: 100px;
     }
@@ -114,13 +113,13 @@
 }
 
 @media screen and(min-width: 768px) {
-    banner__slider-caption{
+    .banner__slider-caption{
         max-width: 355px;
     }
 }
 
 @media screen and(min-width: 1200px) {
-    banner__slider-caption{
+    .banner__slider-caption{
         max-width: 500px;
     }
 }
@@ -161,7 +160,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    banner__slider-title{
+    .banner__slider-title{
         font-size: 72px;
         line-height: 1.18;
         letter-spacing: 0.05em;
@@ -180,10 +179,43 @@
 }
 
 @media screen and (min-width: 1200px) {
-    banner__slider-paragraph {
+    .banner__slider-paragraph {
         font-size: 18px;
         max-width: 363px;
     }
 }
 
+.banner__slider-buttons {
+    position: absolute;
+    bottom: 40px;
+    right: 39px;
+    display: flex;
+    gap: 26px;
+}
+
+.banner__slider-button {
+    width: 60px;
+    height: 24px;
+    color: getColor("decoration-span-dark-color");
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    border: none;
+    border-bottom: 1px currentColor solid;
+    text-transform: capitalize;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+
+    &:hover,
+    &:focus{
+        color: getColor("light-color")
+    }
+}
+
+.banner__slider-button--next{
+    justify-content: flex-end; 
+}
 
