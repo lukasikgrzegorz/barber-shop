@@ -23,6 +23,7 @@
 .contact__title{
     @include title;
     color: getColor("light-color");  
+    text-align: center;
 }
 
 .contact__wrapper{
