@@ -59,11 +59,7 @@
 }
 
 .pricelist__title{
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.16;
-    letter-spacing: 0.05em;
+    @include title;
     color: getColor("light-color");
     margin-top: 20px;
 }

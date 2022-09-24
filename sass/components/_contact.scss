@@ -21,13 +21,8 @@
 }
 
 .contact__title{
-    font-family: 'Raleway';
-    color: getColor("light-color");
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.16;
-    letter-spacing: 0.05em;
-    text-align: center;
+    @include title;
+    color: getColor("light-color");  
 }
 
 .contact__wrapper{
@@ -63,27 +58,30 @@
     align-items: center;
     gap: 16px;
 }
-
-.contact__text{
+.contact__text {
     color: getColor("secondary-light-color");
     font-style: normal;
-    cursor: pointer;
     display: block;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
+    transition: color $main-animation;
+}
+
+.contact__link{
+    @extend .contact__text;  
+    cursor: pointer;
+    
+    &:hover,
+    &:focus{
+        color: getColor("accent-color");
+    }
     
 }
 
-.contact__text--underline{
-    color: getColor("secondary-light-color");
+.contact__link--underline{
+    @extend .contact__link;
     text-decoration: underline;
-    cursor: pointer;
-    display: block;
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-
 }
 
 .contact__icon-wrapper{

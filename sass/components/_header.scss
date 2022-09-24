@@ -20,6 +20,11 @@
 
 .header__logo {
     color: getColor("light-color");
+
+    &:hover,
+    &:focus{
+        color: getColor("accent-color")
+    }
 }
 
 @media screen and(min-width: 768px) {
@@ -138,6 +143,12 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+    transition: color $main-animation;
+    
+    &:hover,
+    &:focus{
+        color: getColor("accent-color");
+    }
 }
 
 @media screen and (min-width: 768px) {

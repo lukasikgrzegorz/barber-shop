@@ -13,7 +13,6 @@
     
     const nextBtnFunction = () => {
         refs.images[actualImageIndex].classList.add('is-invisible');
-        refs.images[actualImageIndex].classList.add('is-faded');
         actualImageIndex++;
         if (actualImageIndex > lastImageIndex) { actualImageIndex = 0; }
         refs.images[actualImageIndex].classList.remove('is-invisible');
@@ -22,9 +21,7 @@
     const autoSlide = () => {
         nextBtnFunction();
         setTimeout(autoSlide, 5000);
-    };
-
-    autoSlide();
+    };autoSlide();
   
     refs.nextBtn.addEventListener('click', nextBtnFunction);
 

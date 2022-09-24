@@ -17,12 +17,12 @@
     }
 }
 
-.about__wrapper--aside{
+.about__aside{
     display: none;
 }
 
 @media screen and (min-width: 768px) {
-    .about__wrapper--aside {
+    .about__aside {
         display: flex;
         flex-direction: column;
         flex-basis: calc((100% - 30px) / 2);
