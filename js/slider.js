@@ -18,14 +18,20 @@
         refs.images[actualImageIndex].classList.remove('is-invisible');
     };
 
-    const autoSlide = () => {
-        nextBtnFunction();
-        setTimeout(autoSlide, 5000);
-    };autoSlide();
+    let mainInterval = setInterval(nextBtnFunction, 5000);
+
+    const resetMainInterval = () => {
+        clearInterval(mainInterval);
+        mainInterval = setInterval(nextBtnFunction, 5000);
+    }
   
-    refs.nextBtn.addEventListener('click', nextBtnFunction);
+    refs.nextBtn.addEventListener('click', () => { 
+        nextBtnFunction();
+        resetMainInterval();
+    });
 
     refs.prevBtn.addEventListener('click', () => {
+        resetMainInterval();
         refs.images[actualImageIndex].classList.add('is-invisible');
         refs.images[actualImageIndex].classList.add('is-faded');
         actualImageIndex--;
