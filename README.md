@@ -2,14 +2,14 @@
 
 Responsive website created on the basis of a mock-up in Figma. The theme is a barber shop.
 
-https://lukasikgrzegorz.github.io/barbershop
+https://lukasikgrzegorz.github.io/barber-shop
 
 ## 🚀 Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/lukasikgrzegorz/barbershop
+  git clone https://github.com/lukasikgrzegorz/barber-shop
 ```
 
 ## 📝 Tech Stack
